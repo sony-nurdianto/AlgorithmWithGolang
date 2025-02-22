@@ -1,0 +1,2 @@
+### Kompleksitas dan Analisis Performa  
+Efisiensi sebuah algoritma diukur melalui berbagai parameter, seperti waktu CPU, memori, disk, dan jaringan. Kompleksitas menunjukkan bagaimana algoritma berkembang ketika jumlah parameter masukan meningkat. Performa adalah ukuran dari waktu eksekusi, penggunaan ruang, memori, dan parameter lainnya. Algoritma dibandingkan berdasarkan waktu pemrosesan dan konsumsi sumber daya. Kompleksitas diukur dengan parameter tertentu dan direpresentasikan menggunakan notasi Big O.
