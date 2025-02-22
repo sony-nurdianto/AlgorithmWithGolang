@@ -1,7 +1,6 @@
 package main
 
 import (
-	"fmt"
 	"sort"
 )
 
@@ -91,15 +90,4 @@ func Grouping(done <-chan struct{}, numStream <-chan int) <-chan []int {
 }
 
 func main() {
-	done := make(chan struct{})
-	defer close(done)
-	twoDArray := [3][3]int{
-		{1, 2, 3},
-		{4, 5, 6},
-		{7, 8, 9},
-	}
-
-	grouping := Grouping(done, Indexing(done, Generator(done, twoDArray)))
-
-	fmt.Println(<-grouping)
 }
