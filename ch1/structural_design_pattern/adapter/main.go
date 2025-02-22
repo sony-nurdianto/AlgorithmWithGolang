@@ -19,6 +19,7 @@ type Adapter struct {
 }
 
 func (adapter Adapter) process() {
+	fmt.Println("Adapter Process")
 	adapter.adaptee.Convert()
 }
 
