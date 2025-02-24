@@ -96,33 +96,27 @@ func TeeMinMax(done <-chan struct{}, in <-chan []int) (_, _ <-chan int) {
 }
 
 func GetMin(arr []int) int {
-	if len(arr) == 1 {
-		return arr[0]
+	k := arr[0]
+
+	for i := range arr {
+		if k > arr[i] {
+			k = arr[i]
+		}
 	}
 
-	arrBorder := len(arr) / 2
-	leftMin := GetMin(arr[:arrBorder])
-	rightMin := GetMin(arr[arrBorder:])
-
-	if leftMin < rightMin {
-		return leftMin
-	}
-	return rightMin
+	return k
 }
 
 func GetMax(arr []int) int {
-	if len(arr) == 1 {
-		return arr[0]
+	k := arr[0]
+
+	for i := range arr {
+		if k < arr[i] {
+			k = arr[i]
+		}
 	}
 
-	arrBorder := len(arr) / 2
-	leftMax := GetMax(arr[:arrBorder])
-	rightMax := GetMax(arr[arrBorder:])
-
-	if leftMax > rightMax {
-		return leftMax
-	}
-	return rightMax
+	return k
 }
 
 func main() {
